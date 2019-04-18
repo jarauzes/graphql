@@ -1,0 +1,20 @@
+{
+  "name": "graphql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "author": "jarauzes@hotmail.com",
+    "type": "git",
+    "url": "git+https://github.com/jarauzes/graphql.git"
+  },
+  "author": "Joe Ydoan Rauzes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarauzes/graphql/issues"
+  },
+  "homepage": "https://github.com/jarauzes/graphql#readme"
+}
