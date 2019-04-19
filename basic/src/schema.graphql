@@ -1,5 +1,3 @@
-// Type definitions (SCHEMA)
-const typeDefs = `
     type Query {
         users(query: String): [User!]!
         me: User!
@@ -68,6 +66,3 @@ const typeDefs = `
         id: ID!
         text: String!
     }
-`;
-
-export { typeDefs }
