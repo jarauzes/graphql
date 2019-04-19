@@ -1,5 +1,4 @@
 import { GraphQLServer } from 'graphql-yoga';
-import { Http2SecureServer } from 'http2';
 
 // Scalar Types(5): String, Boolean, Int, Float, ID  (!-important must have return, else null)
 // Non Scalar Type(2): Object or Array (collection of discrete value)
