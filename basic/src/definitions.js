@@ -5,6 +5,7 @@ const typeDefs = `
         me: User!
         Posts(query: String): [Post!]!
         Comments(query: String): [Comment!]!
+        Updates: [Update!]!
     }
 
     type User {
@@ -13,6 +14,7 @@ const typeDefs = `
         email: String!
         age: Int
         posts: [Post!]!
+        comments: [Comment!]!
     }
 
     type Post {
@@ -21,13 +23,19 @@ const typeDefs = `
         body: String!
         published: Boolean!
         author: User! 
+        comments: [Comment!]!
     }
 
     type Comment {
         id: ID!
-        message: String!
+        text: String!
         author: User!
-        posts: [Post!]!
+        post: Post!
+    }
+
+    type Update {
+        id: ID!
+        text: String!
     }
 `;
 
