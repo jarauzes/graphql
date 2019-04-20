@@ -4,8 +4,7 @@ REFERENCE: https://github.com/prisma/graphql-yoga<br/>
 REFERENCE: https://github.com/kelektiv/node-uuid#readme<br/>
 <h2>Spread Operator</h2>
 REFERENCE: https://www.npmjs.com/package/babel-plugin-transform-object-rest-spread<br/>
-...ARRAY
-<br/>
+...ARRAY<br/>
 <br/>
 <h2>Enum</h2>
 1. A special type that defines a set of constants<br/>
@@ -13,3 +12,11 @@ REFERENCE: https://www.npmjs.com/package/babel-plugin-transform-object-rest-spre
 3. Values for the field must be one of the constants for the type<br/>
 <br/>
 Example: UserAdmin [standard, editor, admin]<br/>
+<br/>
+<h2>Prisma</h2>
+<p>
+<b>replaces traditional (ORM's) Object-relational mapping</b><br/>
+- Simplified & type-safe database access<br/>
+- Declarative migrations & data modeling<br/>
+- Powerful & visual data management<br/>
+</p>
