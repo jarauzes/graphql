@@ -40,7 +40,7 @@ const posts = [{
     id: 'P19F9DF9REODF4',
     title: 'Ant story',
     body: 'The small hungry ant, walk over the the lazy dog fel',
-    published: true,
+    published: false,
     author: 'U19HIHIA3B8I4'
 }, {
     id: 'P19F9DF9REODF5',
