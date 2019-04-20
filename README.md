@@ -20,3 +20,7 @@ Example: UserAdmin [standard, editor, admin]<br/>
 - Declarative migrations & data modeling<br/>
 - Powerful & visual data management<br/>
 </p>
+<br/>
+<h2>INtegrating Prisma into a Node.js Project</h2>
+REFERENCE: https://github.com/prisma/prisma-binding<br/>
+<code>$ npm run get-schema</code> - to fetch latest schema<br/>
