@@ -42,6 +42,12 @@ const posts = [{
     body: 'The small hungry ant, walk over the the lazy dog fel',
     published: true,
     author: 'U19HIHIA3B8I4'
+}, {
+    id: 'P19F9DF9REODF5',
+    title: 'Butterfly',
+    body: 'The small butterfly, wfly over the nice flower',
+    published: true,
+    author: 'U19HIHIA3B8I1'
 }]
 
 const comments = [{
