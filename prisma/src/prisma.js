@@ -5,7 +5,14 @@ const prisma = new Prisma({
     endpoint: 'http://localhost:4466'
 })
 
+
 const createPostForUser = async (authorId, data) => {
+    const userExists = await prisma.exists.User({ id: authorId })
+
+    if(!userExists) {
+        throw new Error('user not found');
+    }
+
     const post = await prisma.mutation.createPost({
         data: {
             ...data,
@@ -15,13 +22,8 @@ const createPostForUser = async (authorId, data) => {
                 }
             }
         }
-    }, '{ id }')
-    const user = await prisma.query.user({
-        where: {
-            id: authorId
-        }
-    }, '{ id name email posts { id title published } }')
-    return user
+    }, '{ author { id name email posts{ id title published } } }')
+    return post.author
 }
 
 // createPostForUser('cjuppmh47010c07886gvu4xaa', {
@@ -30,27 +32,33 @@ const createPostForUser = async (authorId, data) => {
 //     published: true
 // }).then((user) => {
 //     console.log(JSON.stringify(user, undefined, 2))
+// }).catch((error) => {
+//     console.log(error.message)
 // });
 
+
 const updatePostForUser = async (postId, data) => {
+    const postExists = await prisma.exists.Post({ id: postId })
+
+    if(!postExists) {
+        throw new Error('Post not found');
+    }
+
     const post = await prisma.mutation.updatePost({
         where: {
             id: postId
         },
         data
-    }, '{ author { id } }')
-    const user = await prisma.query.user({
-        where: {
-            id: post.author.id
-        }
-    }, '{ id name email posts { id title published } }')
-    return user
+    }, '{ author { id name email posts { id title published } } }')
+    return post.author
 }
 
-updatePostForUser("cjuq3v3vd05el0788ln5wtduo", {
+updatePostForUser("cjuq3s36j05bt0788mnxghmoc", {
     title: 'Graph QL Prisma',
     body: 'Prisma replaces traditional ORMs',
     published: true
 }).then((user) => {
     console.log(JSON.stringify(user, undefined, 2))
+}).catch((error) => {
+    console.log(error.message)
 });
