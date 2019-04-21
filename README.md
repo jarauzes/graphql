@@ -24,4 +24,5 @@ REFERENCE: https://github.com/prisma/prisma-binding<br/>
 <code>$ npm run get-schema</code> - to fetch latest schema<br/>
 <p>Database Schemas to PostgreSQL: datamodel.graphql</p>
 <code>$ prisma deploy</code> - to fetch latest schema<br/>
+<code>$ prisma delete</code> - to delete all in Database<br/>
 <code>$ npm run get-schema</code> - to renew all scheme<br/>

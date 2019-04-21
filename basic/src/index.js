@@ -12,7 +12,7 @@ import Comment from './resolvers/comment'
 const pubsub = new PubSub()
 
 const server = new GraphQLServer({
-    typeDefs: './basic/src/schema.graphql',
+    typeDefs: './prisma/src/schema.graphql',
     resolvers: {
         Query,
         Mutation,
