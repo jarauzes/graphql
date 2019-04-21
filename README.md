@@ -14,15 +14,14 @@ REFERENCE: https://www.npmjs.com/package/babel-plugin-transform-object-rest-spre
 Example: UserAdmin [standard, editor, admin]<br/>
 <br/>
 <h2>Prisma</h2>
-<p>
-<b>replaces traditional (ORM's) Object-relational mapping</b><br/>
+<p><b>replaces traditional (ORM's) Object-relational mapping</b><br/>
 - Simplified & type-safe database access<br/>
 - Declarative migrations & data modeling<br/>
-- Powerful & visual data management<br/>
-</p>
+- Powerful & visual data management<br/></p>
 <br/>
 <h2>Integrating Prisma into a Node.js Project</h2>
 REFERENCE: https://github.com/prisma/prisma-binding<br/>
 <code>$ npm run get-schema</code> - to fetch latest schema<br/>
 <p>Database Schemas to PostgreSQL: datamodel.graphql</p>
 <code>$ prisma deploy</code> - to fetch latest schema<br/>
+<code>$ npm run get-schema</code> - to renew all scheme<br/>
