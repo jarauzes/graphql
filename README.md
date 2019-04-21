@@ -24,3 +24,5 @@ Example: UserAdmin [standard, editor, admin]<br/>
 <h2>Integrating Prisma into a Node.js Project</h2>
 REFERENCE: https://github.com/prisma/prisma-binding<br/>
 <code>$ npm run get-schema</code> - to fetch latest schema<br/>
+<p>Database Schemas to PostgreSQL: datamodel.graphql</p><br/
+<code>$ prisma deploy</code> - to fetch latest schema<br/>

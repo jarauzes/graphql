@@ -1,1 +1,1 @@
-prisma/prisma/*.yml
+prisma/**/*.yml
