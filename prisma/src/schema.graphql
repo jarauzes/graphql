@@ -78,7 +78,7 @@
         id: ID!
         name: String!
         email: String
-        password: String!
+        password: String
         posts: [Post!]!
         comments: [Comment!]!
     }

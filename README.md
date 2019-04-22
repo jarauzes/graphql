@@ -31,3 +31,16 @@ REFERENCE: https://github.com/prisma/prisma-binding<br/>
 <p>
 Let's say we had a relatively complicated page in our app, which let us look at two heroes side by side, along with their friends. You can imagine that such a query could quickly get complicated, because we would need to repeat the fields at least once - one for each side of the comparison.
 </p>
+<div>
+Example:<br/>
+<code>query {</code><br/>
+<code>  users {</code><br/>
+<code>    ...userFields</code><br/>
+<code>  }</code><br/>
+<code>}</code><br/>
+<br/>
+<code>fragment userFields on User {</code><br/>
+<code>	id</code><br/>
+<code>  name</code><br/>
+<code>}</code><br/>
+</div>
