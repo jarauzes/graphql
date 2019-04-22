@@ -4,7 +4,8 @@ const Query = {
     users(parent, args, { db, prisma }, info) {
         const opArgs = {
             first: args.first,
-            skip: args.skip
+            skip: args.skip,
+            after: args.after
         }
 
         if(args.query) {
@@ -23,6 +24,7 @@ const Query = {
         const opArgs = {
             first: args.first,
             skip: args.skip,
+            after: args.after,
             where: {
                 published: true
             }
@@ -44,6 +46,9 @@ const Query = {
         const userId = getUserId(request)
 
         const opArgs = {
+            first: args.first,
+            skip: args.skip,
+            after: args.after,
             where: {
                 author: {
                     id: userId
