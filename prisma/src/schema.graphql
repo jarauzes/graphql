@@ -1,8 +1,8 @@
     type Query {
-        users(query: String): [User!]!
+        users(query: String, first: Int, skip: Int): [User!]!
         me: User!
         myPosts: [Post!]!
-        Posts(query: String): [Post!]!
+        Posts(query: String, first: Int, skip: Int): [Post!]!
         Comments(query: String): [Comment!]!
         Updates: [Update!]!
         post(id: ID!): Post!
@@ -29,6 +29,7 @@
     type Subscription {
         comment(postId: ID!): CommentSubscriptionPayload!
         post: PostSubscriptionPayload!
+        myPost: myPostSubscriptionPayload!
     }
 
     type AuthPayload{
@@ -118,4 +119,9 @@
     type CommentSubscriptionPayload {
         mutation: MutationType!
         node: Comment
+    }
+
+    type myPostSubscriptionPayload {
+        mutation: MutationType!
+        node: Post
     }
