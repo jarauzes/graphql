@@ -26,3 +26,8 @@ REFERENCE: https://github.com/prisma/prisma-binding<br/>
 <code>$ prisma deploy</code> - to fetch latest schema<br/>
 <code>$ prisma delete</code> - to delete all in Database<br/>
 <code>$ npm run get-schema</code> - to renew all scheme<br/>
+<br/>
+<h2>GraphQL Fragment</h2>
+<p>
+Let's say we had a relatively complicated page in our app, which let us look at two heroes side by side, along with their friends. You can imagine that such a query could quickly get complicated, because we would need to repeat the fields at least once - one for each side of the comparison.
+</p>

@@ -17,10 +17,16 @@ const Query = {
         return prisma.query.users(opArgs, info)
     },
     Posts(parent, {query}, {request, prisma}, info) {
-        const opArgs = {}
+        const userId = getUserId(request)
+        
+        const opArgs = {
+            where: {
+                published: true
+            }
+        }
 
         if(query) {
-            opArgs.where = {
+            opArgs.where.OR = {
                 OR: [{
                     title_contains: query
                 }, {
@@ -31,12 +37,33 @@ const Query = {
 
         return prisma.query.posts(opArgs, info)
     },
+    myPosts(parent, {query}, {request, prisma}, info) {
+        const userId = getUserId(request)
+
+        const opArgs = {
+            where: {
+                author: {
+                    id: userId
+                }
+            }
+        }
+
+        if(query) {
+            opArgs.where.OR = [{
+                title_contains: query
+            }, {
+                body_contains: query
+            }]
+        }
+
+        return prisma.query.posts(opArgs, info)
+    },
     me(parent, args, {prisma, request}, info) {
         const userId = getUserId(request)
 
         return prisma.query.user({
             where: {
-                id: userId,
+                id: userId
             }
         })
     },
