@@ -4,13 +4,16 @@
         Posts(query: String): [Post!]!
         Comments(query: String): [Comment!]!
         Updates: [Update!]!
+        post(id: ID!): Post!
     }
 
     type Mutation {
+
+        login(data: LoginUserInput!): AuthPayload!
         
         createUser(data: CreateUserInput!): AuthPayload!
-        deleteUser(id: ID!): User!
-        updateUser(id: ID!, data: UpdateUserInput): User!
+        deleteUser: User!
+        updateUser(data: UpdateUserInput): User!
 
         createPost(data: CreatePostInput!): Post!
         deletePost(id: ID!): Post!
@@ -38,6 +41,11 @@
         password: String!
     }
 
+    input LoginUserInput {
+        email: String!
+        password: String!
+    }
+
     input UpdateUserInput {
         name: String
         email: String
@@ -47,7 +55,6 @@
         title: String!
         body: String!
         published: Boolean!
-        author: ID!
     }
 
     input UpdatePostInput {
