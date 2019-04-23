@@ -1,0 +1,16 @@
+{
+  "name": "apollo-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joe Ydoan Rauzes",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "parcel-bundler": "^1.12.3"
+  }
+}
