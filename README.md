@@ -40,7 +40,17 @@ Example:<br/>
 <code>}</code><br/>
 <br/>
 <code>fragment userFields on User {</code><br/>
-<code>	id</code><br/>
+<code>  id</code><br/>
 <code>  name</code><br/>
 <code>}</code><br/>
 </div>
+<h2>Production Settings</h2>
+<p>
+<div>Heroku(free) & Prisma Cloud(free)</div>
+<ol>
+<li>Production Database</li>
+<li>Host our Prisma docker container</li>
+<li>Host our Node.js Application</li>
+</ol><br/><br/>
+<code>$ npm run heroku-postbuild</code><div>preparing for deployment</div><br/>
+</p>
