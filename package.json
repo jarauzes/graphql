@@ -7,7 +7,7 @@
     "heroku-postbuild": "babel prisma/src --out-dir dist --copy-files",
     "dev": "env-cmd ./prisma/config/dev.env nodemon prisma/src/index.js --ext js, graphql --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "get-schema": "graphql get-schema -p prisma"
+    "get-schema": "graphql get-schema -p prisma --dotenv prisma/config/dev.env"
   },
   "repository": {
     "author": "Joe Ydoan Rauzes <jarauzes@hotmail.com>",
