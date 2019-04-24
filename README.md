@@ -53,4 +53,8 @@ Example:<br/>
 <li>Host our Node.js Application</li>
 </ol><br/><br/>
 <code>$ npm run heroku-postbuild</code><div>preparing for deployment</div><br/>
+</p><br/>
+<h2>Apollo Client</h2>
+<p>
+Reference: https://parceljs.org/<br/>
 </p>

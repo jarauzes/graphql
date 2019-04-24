@@ -19,7 +19,7 @@ const Query = {
         return prisma.query.users(opArgs, info)
     },
     Posts(parent, args, {request, prisma}, info) {
-        const userId = getUserId(request)
+        //const userId = getUserId(request)
         
         const opArgs = {
             first: args.first,

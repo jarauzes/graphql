@@ -6,8 +6,12 @@
     "start": "node dist/index.js",
     "heroku-postbuild": "babel prisma/src --out-dir dist --copy-files",
     "dev": "env-cmd ./prisma/config/dev.env nodemon prisma/src/index.js --ext js, graphql --exec babel-node",
-    "test": "jest --watch",
+    "test": "env-cmd ./prisma/config/test.env jest --watch --runInBand",
     "get-schema": "graphql get-schema -p prisma --dotenv prisma/config/dev.env"
+  },
+  "jest": {
+    "globalSetup": "./tests/jest/globalSetup.js",
+    "globalTeardown": "./tests/jest/globalTeardown.js"
   },
   "repository": {
     "author": "Joe Ydoan Rauzes <jarauzes@hotmail.com>",
@@ -23,10 +27,13 @@
   "description": "REFERENCE: https://babeljs.io/<br/> REFERENCE: https://github.com/prisma/graphql-yoga<br/> REFERENCE: https://github.com/kelektiv/node-uuid#readme",
   "dependencies": {
     "@babel/polyfill": "^7.4.3",
+    "apollo-boost": "^0.3.1",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "bcryptjs": "^2.4.3",
+    "cross-fetch": "^3.0.2",
     "env-cmd": "^8.0.2",
     "graphql-cli": "^3.0.11",
     "graphql-yoga": "^1.17.4",
